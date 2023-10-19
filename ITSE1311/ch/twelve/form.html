@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form</title>
+
+    <!-- Bootstrap CDN CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="http://localhost/itse1311/css/ch/twelve/form.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Top Navbar Begins -->
+      <!-- shoes and accessories, bridesmaids, -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler custom-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Fashion & Beauty</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ideas & Advice</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bachellor Parties</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="participation-form.html"
+                  >Participation Opportunities</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Events
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Engagement Parties</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Bridal Shower</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Bachelorette Parties</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Rehersal Dinner</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">Honeymoon Plans</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="schedule.html">Schedule</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Top Navbar ends -->
+    </header>
+
+    <main>
+      <div class="web-form">
+        <h1>Participation Form</h1>
+
+        <div class="alert alert-warning">
+          <p>
+            Thank you for your interest in participating for our showcase
+            events. Let us get to know you more by filling out the participation
+            form below.
+          </p>
+
+          <p><strong>All our participants get a free t-shirt!</strong></p>
+        </div>
+
+        <form
+          name="web-form"
+          enctype="multipart/form-data"
+          class="needs-validation"
+          novalidate
+          method="post"
+          action="form.php"
+        >
+          <div class="row">
+            <!-- Full Name - Text Field-->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+              <label for="full-name">Full Name</label>
+              <input
+                type="text"
+                name="full_name"
+                id="full-name"
+                required
+                class="form-control"
+              />
+              <div class="valid-feedback">Look good!</div>
+              <div class="invalid-feedback">Please input full name</div>
+            </div>
+
+            <!-- Age - Number Field-->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+              <label for="age">Age</label>
+              <input
+                type="number"
+                name="age"
+                id="age"
+                required
+                min="16"
+                max="120"
+                class="form-control"
+              />
+              <div class="valid-feedback">Look good!</div>
+              <div class="invalid-feedback">Please input age 16 and older</div>
+            </div>
+
+            <!-- email - email field-->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="your_email"
+                id="email"
+                required
+                class="form-control"
+              />
+              <div class="invalid-feedback">
+                Email address is required. Please input a valid email address.
+              </div>
+            </div>
+
+            <!-- phone - tel field-->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" name="phone" id="phone" class="form-control" />
+              <div class="valid-feedback">Look good!</div>
+            </div>
+
+            <!-- social media - url field-->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+              <label for="url">Social Media URL (optional)</label>
+              <input type="url" name="url" id="url" class="form-control" />
+              <div class="valid-feedback">Look good!</div>
+            </div>
+
+            <!-- start date - date field-->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-3 col-xl-3 col-xxl-4">
+              <label for="date">Start Date</label>
+              <input
+                type="date"
+                name="start_date"
+                id="date"
+                required
+                class="form-control"
+              />
+              <div class="invalid-feedback">Please pick a start date.</div>
+            </div>
+
+            <!-- t-shrit - drop-down (select) field -->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+              <label for="t-shirt">T-shirt size</label>
+              <select name="t_shirt" id="t-shirt" required class="form-select">
+                <option value="">SELECT SIZE</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                <option value="CUSTOM">CUSTOM</option>
+              </select>
+              <div class="invalid-feedback">Please choose a t-shirt size</div>
+              <input
+                type="text"
+                name="custom"
+                placeholder="Please type custom size"
+                required
+                disabled
+                id="custom"
+                class="form-control"
+              />
+            </div>
+
+            <!-- t-shirt color - color field -->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+              <label for="color">T-shirt Color</label>
+              <input
+                type="color"
+                name="color"
+                id="color"
+                class="form-control form-control-color"
+              />
+              <div class="invalid-feedback">
+                If no color was picked, we will give you a gray shirt.
+              </div>
+            </div>
+
+            <!-- background check - file (upload) field -->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+              <label for="file">Upload Required Documents</label>
+              <input
+                type="file"
+                name="file"
+                id="file"
+                required
+                accept=".pdf"
+                class="form-control"
+              />
+              <div class="valid-feedback">Look good!</div>
+              <div class="invalid-feedback">
+                This field is required. Please ensure that our are uploading a
+                file in PDF format.
+              </div>
+            </div>
+
+            <!-- veteran - radio field -->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-xl-6 col-xxl-6">
+              <strong>Participating In:</strong><br />
+              <input
+                type="radio"
+                name="participation"
+                id="fashion-show"
+                value="Fashion Show"
+                required
+                class="form-check-input radio"
+              />
+              <label for="fashion-show">Fashion Show</label>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <input
+                type="radio"
+                name="participation"
+                id="donation"
+                value="Donation"
+                required
+                class="form-check-input radio"
+              />
+              <label for="donation">Donations</label>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <input
+                type="radio"
+                name="participation"
+                id="expectator"
+                value="Expectator"
+                required
+                class="form-check-input radio"
+              />
+              <label for="expectator">Expectator</label>
+            </div>
+
+            <!-- time of day - checkbox field -->
+            <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-xl-6 col-xxl-6">
+              <strong>Preferred Time of Day</strong><br />
+              <input
+                type="checkbox"
+                name="time_of_day[]"
+                id="time-of-day-morning"
+                value="Morning"
+                required
+                class="form-check-input checkbox"
+              />
+              <label for="time-of-day-morning">Morning</label>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <input
+                type="checkbox"
+                name="time_of_day[]"
+                id="time-of-day-afternoon"
+                value="Afternoon"
+                required
+                class="form-check-input checkbox"
+              />
+              <label for="time-of-day-afternoon">Afternoon</label>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <input
+                type="checkbox"
+                name="time_of_day[]"
+                id="time-of-day-evening"
+                value="Evening"
+                required
+                class="form-check-input checkbox"
+              />
+              <label for="time-of-day-evening">Evening</label>
+            </div>
+
+            <!-- comments - textarea (multi-line) field -->
+            <div class="col-12">
+              <label for="about-you">Tell us about you (optional)</label>
+              <textarea
+                name="about_you"
+                id="about-you"
+                class="form-control"
+              ></textarea>
+              <div class="valid-feedback">Look good!</div>
+            </div>
+
+            <!-- terms and conditions - checkbox (switch) field -->
+            <div class="col-12 form-check form-switch">
+              <input
+                type="checkbox"
+                id="terms-and-conditions"
+                name="terms"
+                value="Yes"
+                required
+                class="form-check-input"
+              />
+              <label for="terms-and-conditions"
+                >I accept the terms and conditions</label
+              >
+              <div class="valid-feedback">Look good!</div>
+            </div>
+
+            <div class="col-12">
+              <input
+                type="submit"
+                name="submit"
+                value="Submit Now"
+                class="submit btn btn-outline-primary"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Begin JS Section -->
+    <div>
+      <!-- jQuery CDN JS -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <!-- Bootstrap CDN JS -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+      <!-- Local Javascript -->
+      <script src="http://localhost/itse1311/js/ch/twelve/form.js"></script>
+    </div>
+    <!-- End JS Section -->
+  </body>
+</html>
